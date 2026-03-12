@@ -1,0 +1,5 @@
+ep_length: 1
+payoff_matrix: [[-50, 0,  10],
+                [  0, 2,   0],
+                [ 10, 0, -50]]
+reward_to_cost: False

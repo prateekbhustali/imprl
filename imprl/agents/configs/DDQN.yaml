@@ -1,0 +1,47 @@
+ALGORITHM: DDQN
+SINGLE_AGENT: True
+
+ENV_CONFIG:
+    env_name: k_out_of_n_infinite
+    env_setting: hard-1-of-4_infinite
+    kwargs: 
+        time_limit: 50
+    inference_env_kwargs:
+        time_limit: 20
+
+SEED: 42
+DETERMINISTIC: True # deterministic operations are often slower than nondeterministic operations, but ensure reproducibility.
+NUM_TRAIN_EPISODES: 50_000
+MAX_MEMORY_SIZE: 20_000
+BATCH_SIZE: 64
+TARGET_NETWORK_RESET: 100
+DISCOUNT_FACTOR: 0.8
+
+NETWORK_CONFIG:
+    hidden_layers: [64, 64]
+    optimizer: Adam
+    lr: 0.001
+    lr_scheduler:
+        scheduler: LinearLR
+        kwargs:
+            start_factor: 1
+            end_factor: 0.1
+            total_iters: 10_000
+
+EXPLORATION_STRATEGY:
+    name: epsilon_greedy
+    max_value: 1
+    min_value: 0.01
+    num_episodes: 10_000
+
+LOGGING_INTERVAL: 100 # episodes
+EVAL_INTERVAL: 5_000 # episodes
+NUM_INFERENCE_EPISODES: 10_000 # episodes
+CHECKPOINT_INTERVAL: 5_000 # episodes
+CHECKPOINT_DIR: ./checkpoints/
+
+WANDB:
+    project: null
+    entity: null
+    dir: null
+    mode: online

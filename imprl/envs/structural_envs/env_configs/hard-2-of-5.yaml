@@ -1,0 +1,42 @@
+# Components are unique
+identical: False
+n_components: 5
+n_damage_states: 4
+n_comp_actions: 3
+time_horizon: 50
+initial_belief: [1.0, 0.0, 0.0, 0.0]
+replacement_rewards: [-30, -90, -80, -250, -350] 
+inspection_rewards: [-20, -40, -25, -50, -100]
+mobilisation_reward: 0.0
+failure_penalty_factor: 3
+k: 2
+obs_accuracies: [0.8, 0.85, 0.9, 0.95, 0.8]
+failure_obs_accuracies: [1.0, 1.0, 1.0, 1.0, 1.0]
+discount_factor: 0.99
+replacement_accuracies: [1, 0.9, 0.95, 0.85, 0.8]
+transition_model: [
+                  [[0.82, 0.13, 0.05, 0.0],
+                  [0, 0.87, 0.09, 0.04],
+                  [0, 0, 0.91, 0.09],
+                  [0, 0, 0, 1]],
+
+                  [[0.72, 0.19, 0.09, 0.0],
+                   [0, 0.78, 0.18, 0.04],
+                   [0, 0, 0.85, 0.15],
+                   [0, 0, 0, 1]],
+
+                  [[0.79, 0.17, 0.04, 0.0],
+                   [0, 0.85, 0.09, 0.06],
+                   [0, 0, 0.91, 0.09],
+                   [0, 0, 0, 1]],
+
+                  [[0.8, 0.12, 0.08, 0.0],
+                   [0, 0.83, 0.12, 0.05],
+                   [0, 0, 0.89, 0.11],
+                   [0, 0, 0, 1]],
+
+                  [[0.88, 0.12, 0.0, 0.0],
+                   [0, 0.9, 0.1, 0.0],
+                   [0, 0, 0.93, 0.07],
+                   [0, 0, 0, 1]]
+                  ]

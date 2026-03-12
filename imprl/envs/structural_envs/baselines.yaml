@@ -1,0 +1,314 @@
+k_out_of_n_finite:
+    hard-1-of-5:
+        FailureReplace: 
+            mean: 1503.9
+            stderr: 4.3
+        TPI-CBM: 
+            mean: 1485.74
+            stderr: 4.3
+            policy: 147
+
+    hard-2-of-5:
+        FailureReplace: 
+            mean: 1502.8
+            stderr: 4.4
+        TPI-CBM: 
+            mean: 1498.8
+            stderr: 4.4
+            policy: 148
+        
+    hard-3-of-5:
+        FailureReplace: 
+            mean: 1658
+            stderr: 7.2
+        TPI-CBM: 
+            mean: 1654.19
+            stderr: 7.2
+            policy: 147
+
+    hard-4-of-5:
+        FailureReplace: 
+            mean: 4040.2
+            stderr: 22.2
+        TPI-CBM: 
+            mean: 3998.41
+            stderr: 22.2
+            policy: 149
+
+    hard-5-of-5:
+        FailureReplace:     
+            mean: 23825.1
+            stderr: 50.3 
+        TPI-CBM: 
+            mean: 19728.42
+            stderr: 48.7
+            policy: 14
+
+k_out_of_n_infinite:
+
+    hard-1-of-4_infinite:
+        DoNothing: 
+            mean: 222.23
+        FailureReplace: 
+            mean: 340.65
+        InspectRepair: 
+            mean: 70.1877
+            95_ci: [70.1216, 70.2537]
+            policy_id: 16
+            policy_params: 
+                inspection_interval: 3
+                num_inspection_components: 1
+                replacement_threshold: 1
+        SARSOP:
+            mean: 50.41
+            95_ci: [50.31, 50.51]
+            LBound: 43.6696
+            UBound: 51.8249
+            run_id: l9bfLjPX
+
+    hard-2-of-4_infinite:
+        DoNothing: 
+            mean: 640.79
+        FailureReplace: 
+            mean: 357.91
+        InspectRepair: 
+            mean: 159.3193
+            95_ci: [159.0060, 159.6326]
+            policy_id: 3
+            policy_params: 
+                inspection_interval: 1
+                num_inspection_components: 2
+                replacement_threshold: 2
+        SARSOP:
+            mean: 138.59
+            95_ci: [138.25, 138.93]
+            LBound: 113.191
+            UBound: 141.758
+            run_id: 34ypHTmE
+
+    hard-3-of-4_infinite:
+        DoNothing: 
+            mean: 1231.83
+        FailureReplace: 
+            mean: 550.37
+        InspectRepair: 
+            mean: 358.5056
+            95_ci: [357.4365, 359.5746]
+            policy_id: 7
+            policy_params: 
+                inspection_interval: 1
+                num_inspection_components: 4
+                replacement_threshold: 2
+        SARSOP:
+            mean: 303.93
+            95_ci: [303.18, 304.68]
+            LBound: 272.843
+            UBound: 309.061
+            run_id: CdY0nHXL
+
+    hard-4-of-4_infinite:
+        DoNothing: 
+            mean: 2039.27
+        FailureReplace: 
+            mean: 1494.49
+        InspectRepair: 
+            mean: 913.0309
+            95_ci: [911.3617, 914.7002]
+            policy_id: 6
+            policy_params: 
+                inspection_interval: 1
+                num_inspection_components: 4
+                replacement_threshold: 1
+        SARSOP:
+            mean: 747.54
+            95_ci: [745.92, 749.15]
+            LBound: 727.363
+            UBound: 755.521
+            run_id: wzkWS4mv
+
+    no-mob-1-of-4_infinite:
+        SARSOP:
+            mean: 44.591
+
+    #! 4 component systems - no mobilisation, fpf=1.5
+    n4_k1_nomob_fpf1.5:
+        DoNothing:
+            mean: 111.12
+        FailureReplace:
+            mean: 328.76
+        InspectRepair:
+            mean: 46.8840
+            95_ci: [46.8431, 46.9249]
+            policy_id: 24
+            policy_params:
+                inspection_interval: 4
+                num_inspection_components: 1
+                replacement_threshold: 1
+        SARSOP:
+            mean: 33.55
+            95_ci: [33.47, 33.63]
+            LBound: 28.5191
+            UBound: 34.7065
+            run_id: UzjMXbdm
+
+    n4_k2_nomob_fpf1.5:
+        DoNothing:
+            mean: 320.40
+        FailureReplace:
+            mean: 336.96
+        InspectRepair:
+            mean: 120.6755
+            95_ci: [120.4248, 120.9261]
+            policy_id: 11
+            policy_params:
+                inspection_interval: 2
+                num_inspection_components: 2
+                replacement_threshold: 2
+        SARSOP:
+            mean: 99.86
+            95_ci: [99.66, 100.07]
+            LBound: 81.2397
+            UBound: 102.426
+            run_id: 5vUCDgLL
+
+    n4_k3_nomob_fpf1.5:
+        DoNothing:
+            mean: 615.92
+        FailureReplace:
+            mean: 432.79
+        InspectRepair:
+            mean: 252.0383
+            95_ci: [251.4556, 252.6211]
+            policy_id: 5
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 3
+                replacement_threshold: 2
+        SARSOP:
+            mean: 228.44
+            95_ci: [227.98, 228.90]
+            LBound: 203.119
+            UBound: 233.279
+            run_id: ym3OywtJ
+
+    n4_k4_nomob_fpf1.5:
+        DoNothing:
+            mean: 1019.64
+        FailureReplace:
+            mean: 905.72
+        InspectRepair:
+            mean: 612.7271
+            95_ci: [611.8169, 613.6373]
+            policy_id: 6
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 4
+                replacement_threshold: 1
+        SARSOP:
+            mean: 554.07
+            95_ci: [553.04, 555.10]
+            LBound: 510.539
+            UBound: 560.997
+            run_id: CiQdbIyG
+
+    #! 3 component systems - no mobilisation
+    n3_k1_nomob:
+        DoNothing:
+            mean: 180.00
+        FailureReplace:
+            mean: 213.30
+        InspectRepair: 
+            mean: 57.8787
+            95_ci: [57.7675, 57.9899]
+            policy_id: 7
+            policy_params:
+                inspection_interval: 2
+                num_inspection_components: 1
+                replacement_threshold: 2
+        SARSOP:
+            mean: 45.62
+            95_ci: [45.51, 45.74]
+            LBound: 40.4709
+            UBound: 46.7027
+            run_id: uT6gHnzW
+
+    n3_k2_nomob:
+        DoNothing:
+            mean: 551.32
+        FailureReplace:
+            mean: 272.60
+        InspectRepair: 
+            mean: 160.3139
+            95_ci: [159.8516, 160.7763]
+            policy_id: 3
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 2
+                replacement_threshold: 2
+        SARSOP:
+            mean: 142.46
+            95_ci: [142.16, 142.76]
+            LBound: 127.23
+            UBound: 145.059
+            run_id: KISgwKuW
+
+    n3_k3_nomob:
+        DoNothing:
+            mean: 1136.45
+        FailureReplace:
+            mean: 765.45
+        InspectRepair: 
+            mean: 492.8395
+            95_ci: [491.8136, 493.8653]
+            policy_id: 4
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 3
+                replacement_threshold: 1
+        SARSOP:
+            mean: 419.04
+            95_ci: [418.01, 420.06]
+            LBound: 410.911
+            UBound: 424.166
+            run_id: 46phUOJ6
+
+    #! 2 component systems - no mobilisation
+    n2_k1_nomob:
+        DoNothing:
+            mean: 156.60
+        FailureReplace:
+            mean: 117.25
+        InspectRepair:
+            mean: 56.1942
+            95_ci: [56.0617, 56.3268]
+            policy_id: 1
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 1
+                replacement_threshold: 2
+        SARSOP:
+            mean: 52.71
+            95_ci: [52.56, 52.85]
+            LBound: 53.3987
+            UBound: 53.7203
+            run_id: sRgrAOKj
+
+    n2_k2_nomob:
+        DoNothing:
+            mean: 487.12
+        FailureReplace:
+            mean: 315.00
+        InspectRepair: 
+            mean: 218.9945
+            95_ci: [218.5027, 219.4862]
+            policy_id: 2
+            policy_params:
+                inspection_interval: 1
+                num_inspection_components: 2
+                replacement_threshold: 1
+        SARSOP:
+            mean: 191.19
+            95_ci: [190.69, 191.69]
+            LBound: 193.398
+            UBound: 193.466
+            run_id: JN1CO8Ga

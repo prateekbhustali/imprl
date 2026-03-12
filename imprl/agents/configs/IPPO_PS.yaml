@@ -1,0 +1,45 @@
+ALGORITHM: IPPO_PS
+SINGLE_AGENT: False
+
+ENV_CONFIG:
+    env_name: k_out_of_n_infinite
+    env_setting: hard-1-of-4_infinite
+    kwargs: 
+        time_limit: 50
+        return_discounted_rewards: True
+    inference_env_kwargs:
+        time_limit: 20
+        return_discounted_rewards: True
+
+SEED: 42
+DETERMINISTIC: True # deterministic operations are often slower than nondeterministic operations, but ensure reproducibility.
+total_timesteps: 20_000_000
+
+# IPPO_PS hyperparameters
+learning_rate: 2.5e-4
+num_envs: 4
+num_steps: 128
+anneal_lr: False
+gamma: 0.99
+gae_lambda: 0.95
+num_minibatches: 4
+update_epochs: 4
+norm_adv: True
+clip_coef: 0.05
+clip_vloss: True
+ent_coef: 0.01
+vf_coef: 0.5
+max_grad_norm: 0.5
+target_kl: null
+
+LOGGING_INTERVAL: 100 # iterations; if null, log every iteration; else log when (iteration % LOGGING_INTERVAL == 0)
+EVAL_INTERVAL: null # iterations; if null, defaults to CHECKPOINT_INTERVAL (~19 evals total)
+NUM_INFERENCE_EPISODES: 10_000 # episodes
+CHECKPOINT_INTERVAL: null # iterations; if null, computed at runtime as num_iterations // 19 (~19 checkpoints)
+CHECKPOINT_DIR: ./checkpoints/
+
+WANDB:
+    project: null
+    entity: null
+    dir: null
+    mode: online

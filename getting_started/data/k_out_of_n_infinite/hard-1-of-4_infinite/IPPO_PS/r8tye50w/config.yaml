@@ -1,0 +1,43 @@
+ALGORITHM: IPPO_PS
+SINGLE_AGENT: false
+ENV_CONFIG:
+  env_name: k_out_of_n_infinite
+  env_setting: hard-1-of-4_infinite
+  kwargs:
+    time_limit: 50
+    return_discounted_rewards: true
+  inference_env_kwargs:
+    time_limit: 20
+    return_discounted_rewards: true
+SEED: 8
+DETERMINISTIC: true
+total_timesteps: 20000000
+learning_rate: 0.00025
+num_envs: 4
+num_steps: 128
+anneal_lr: false
+gamma: 0.99
+gae_lambda: 0.95
+num_minibatches: 4
+update_epochs: 4
+norm_adv: true
+clip_coef: 0.1
+clip_vloss: true
+ent_coef: 0.01
+vf_coef: 0.5
+max_grad_norm: 0.5
+target_kl: null
+LOGGING_INTERVAL: null
+EVAL_INTERVAL: 2055
+NUM_INFERENCE_EPISODES: 100
+CHECKPOINT_INTERVAL: 2055
+CHECKPOINT_DIR: ./trained_models/k_out_of_n_infinite/hard-1-of-4_infinite/IPPO_PS
+WANDB:
+  run_id: r8tye50w
+batch_size: 512
+minibatch_size: 128
+num_iterations: 39062
+
+hydra:
+  run:
+    dir: ${hydra_run_dir}

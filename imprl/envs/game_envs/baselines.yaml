@@ -1,0 +1,5 @@
+matrix_game:
+  climb_game:
+    best: 275
+  penalty_game:
+    best: 10
