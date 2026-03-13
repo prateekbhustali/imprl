@@ -218,6 +218,20 @@ This project utilizes the abstractions in [EPyMARL](https://github.com/uoe-agent
 ## Citation 📚
 If you find this repository useful, please consider citing:
 
+[The price of decentralization in managing engineering systems through multi-agent reinforcement learning](https://arxiv.org/abs/2603.11884)
+
+```bibtex
+@misc{bhustali_decentralization_2026,
+      title={The price of decentralization in managing engineering systems through multi-agent reinforcement learning},
+      author={Prateek Bhustali and Pablo G. Morato and Konstantinos G. Papakonstantinou and Charalampos P. Andriotis},
+      year={2026},
+      eprint={2603.11884},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA},
+      url={https://arxiv.org/abs/2603.11884},
+}
+```
+
 [Assessing the Optimality of Decentralized Inspection and Maintenance Policies for Stochastically Degrading Engineering Systems](https://link.springer.com/chapter/10.1007/978-3-031-74650-5_13) ([open access](https://research.tudelft.nl/en/publications/assessing-the-optimality-of-decentralized-inspection-and-maintena-2))
 
 ```bibtex
