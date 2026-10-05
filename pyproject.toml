@@ -1,0 +1,40 @@
+[project]
+name = "imprl"
+version = "0.2.0"
+description = "A (beginner-friendly) library for applying reinforcement learning to inspection and maintenance planning of deteriorating engineering systems."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+authors = [{ name = "Prateek Bhustali", email = "p.bhustali@tudelft.nl" }]
+
+dependencies = [
+  "numpy>=1.26.2,<2.0.0",
+  "scipy>=1.17.1",
+  "torch>=2.2.1,<2.3.0", # PyTorch
+  "gymnasium>=0.29.1,<1.0.0", # environment API
+  "notebook>=7.1.2,<8.0.0", # Jupyter notebooks
+  "hydra-core>=1.3.2,<2.0.0", # config management
+  "xmltodict>=1.0.2", # for parsing SARSOP policies
+  "wandb>=0.17.6,<0.18.0", # logging
+  "matplotlib>=3.8.2,<4.0.0",
+  "seaborn>=0.13.2,<0.14.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0.1,<9.0.0", # testing
+  "black>=24.3.0,<25.0.0", # code formatting
+  "ruff>=0.6.0,<1.0.0", # linting
+
+]
+slurm = [
+  "mpi4py>=3.1.0,<4.2.0",
+  # OpenMPI must come from the system/module, not PyPI
+]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["imprl*"]

@@ -1,0 +1,42 @@
+ALGORITHM: IPPO_PS
+SINGLE_AGENT: false
+ENV_CONFIG:
+  env_name: k_out_of_n_infinite
+  env_setting: hard-1-of-4_infinite
+  kwargs:
+    time_limit: 50
+  inference_env_kwargs:
+    time_limit: 20
+SEED: 7
+DETERMINISTIC: true
+total_timesteps: 20000000
+learning_rate: 0.00025
+num_envs: 4
+num_steps: 128
+anneal_lr: false
+gamma: 0.8
+gae_lambda: 0.95
+num_minibatches: 4
+update_epochs: 8
+norm_adv: true
+clip_coef: 0.1
+clip_vloss: true
+ent_coef: 0.001
+max_grad_norm: 0.5
+target_kl: null
+LOGGING_INTERVAL: 100
+EVAL_INTERVAL_TIMESTEPS: 2000000
+NUM_INFERENCE_EPISODES: 100
+CHECKPOINT_INTERVAL_TIMESTEPS: 2000000
+CHECKPOINT_DIR: /scratch/pbhustali/ppo_kn_infinite_seeds1-10-IPPO-v0/checkpoints/hard-1-of-4_infinite/IPPO_PS_v0/qa61rrvz
+WANDB:
+  project: journal-paper-SFI-runs
+  entity: null
+  dir: /scratch/pbhustali/ppo_kn_infinite_seeds1-10-IPPO-v0
+  mode: disabled
+  run_id: qa61rrvz
+batch_size: 512
+minibatch_size: 128
+num_iterations: 39062
+CHECKPOINT_INTERVAL: 3907
+EVAL_INTERVAL: 3907

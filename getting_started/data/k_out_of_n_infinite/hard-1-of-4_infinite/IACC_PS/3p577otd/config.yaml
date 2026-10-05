@@ -1,0 +1,55 @@
+ALGORITHM: IACC_PS
+SINGLE_AGENT: false
+ENV_CONFIG:
+  env_name: k_out_of_n_infinite
+  env_setting: hard-1-of-4_infinite
+  kwargs:
+    time_limit: 50
+  inference_env_kwargs:
+    time_limit: 20
+SEED: 1
+DETERMINISTIC: true
+NUM_TRAIN_EPISODES: 50000
+MAX_MEMORY_SIZE: 10000
+BATCH_SIZE: 64
+DISCOUNT_FACTOR: 0.8
+ACTOR_CONFIG:
+  hidden_layers:
+  - 32
+  - 32
+  optimizer: Adam
+  lr: 0.0005
+  lr_scheduler:
+    scheduler: LinearLR
+    kwargs:
+      start_factor: 1
+      end_factor: 0.1
+      total_iters: 20000
+CRITIC_CONFIG:
+  hidden_layers:
+  - 64
+  - 64
+  optimizer: Adam
+  lr: 0.001
+  lr_scheduler:
+    scheduler: LinearLR
+    kwargs:
+      start_factor: 1
+      end_factor: 0.1
+      total_iters: 20000
+EXPLORATION_STRATEGY:
+  name: epsilon_greedy
+  max_value: 1
+  min_value: 0.01
+  num_episodes: 10000
+LOGGING_INTERVAL: 100
+EVAL_INTERVAL: 5000
+NUM_INFERENCE_EPISODES: 100
+CHECKPOINT_INTERVAL: 5000
+CHECKPOINT_DIR: ./trained_models/k_out_of_n_infinite/hard-1-of-4_infinite/IACC_PS
+WANDB:
+  run_id: 3p577otd
+
+hydra:
+  run:
+    dir: ${hydra_run_dir}
